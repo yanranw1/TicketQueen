@@ -49,9 +49,19 @@ const App = () => {
   };
 
   // Auth Views
-  if (view === 'login') return <Login setView={setView} setCurrentUser={setCurrentUser} loadEvents={loadEvents} showMessage={showMessage} />;
-  if (view === 'signup') return <Signup setView={setView} setCurrentUser={setCurrentUser} loadEvents={loadEvents} showMessage={showMessage} />;
-  
+  if (view === 'login') return (
+    <>
+      <MessageAlert message={message} />
+      <Login setView={setView} setCurrentUser={setCurrentUser} loadEvents={loadEvents} showMessage={showMessage} />
+    </>
+  );
+
+  if (view === 'signup') return (
+    <>
+      <MessageAlert message={message} />
+      <Signup setView={setView} setCurrentUser={setCurrentUser} loadEvents={loadEvents} showMessage={showMessage} />
+    </>
+  );
   // Dashboard View
   if (view === 'dashboard') return <UserDashboard currentUser={currentUser} setView={setView} handleLogout={handleLogout} showMessage={showMessage} />;
 
