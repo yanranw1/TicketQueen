@@ -21,11 +21,11 @@ A full-stack ticket purchasing web application built with React, Go, and MySQL. 
 ### Technical Features
 
 - 🔒 **Concurrency Control** - Mutex locks prevent overselling
+- 🧱 **Database-Level Row Locking** – `SELECT ... FOR UPDATE` ensures safe concurrent writes
 - 💾 **Database Transactions** - ACID compliance with row-level locking
-- 🚀 **RESTful API** - Clean API design with proper HTTP methods
-- 📱 **Responsive Design** - Works seamlessly on mobile and desktop
+- 🔐 **Secure Authentication** – All passcodes are hashed (bcrypt) before storage
 - ⚡ **Performance Optimized** - Efficient database queries with indexes
-- 🛡️ **Error Handling** - Graceful error handling throughout the stack
+- 🚀 **RESTful API** - Clean API design with proper HTTP methods
 
 ## 🛠️ Tech Stack
 
